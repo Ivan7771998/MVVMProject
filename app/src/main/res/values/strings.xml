@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVVMProject</string>
+    <string name="text_view_model_data">Нет данных</string>
+    <string name="text_btn_get_data">Получить данные</string>
+    <string name="text_send_data">Отправить данные</string>
+    <string name="hint_input_data">Введите данные</string>
+</resources>
