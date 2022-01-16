@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mvvmproject.R
+import com.example.mvvmproject.data.storage.room.AppDatabase
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
@@ -21,11 +22,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         Log.e("TAG", "Activity created")
 
         initView()
+
+        AppDatabase.getDatabase(this)
 
         vm = ViewModelProvider(this, MainViewModelFactory(this))[MainViewModel::class.java]
 
